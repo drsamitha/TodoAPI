@@ -7,7 +7,7 @@ import { TodoModule } from './todo/todo.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://172.17.0.3:27017/todoapp'),
+    MongooseModule.forRoot('mongodb://mongodb:27017/todoapp'),
     TodoModule,
   ],
   controllers: [AppController],

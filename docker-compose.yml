@@ -1,0 +1,22 @@
+services:
+  todo-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    networks:
+      - todo-net
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - todo-net
+
+networks:
+  todo-net:
+    driver: bridge
