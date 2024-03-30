@@ -9,6 +9,8 @@ COPY package*.json ./
 
 RUN npm install -g @nestjs/cli
 
+RUN npm install --save @nestjs/swagger swagger-ui-express
+
 # Install dependencies
 RUN npm install
 
